@@ -49,7 +49,7 @@ export class MembersService {
     const member: Member = [...this.memberCache.values()]
       .reduce((arr, ele) => arr.concat(ele.body),[])
       .find((m: Member) => m.username.toLowerCase() === username.toLowerCase())
-    console.log(member)
+    // console.log(member)
 
     if (member) return of(member)
 
